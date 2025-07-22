@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación de Alto Impacto: Estudio LLPF UNA Puno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 6rem 2rem 2rem 2rem;
+            scroll-snap-align: start;
+        }
+        html {
+            scroll-snap-type: y mandatory;
+        }
+        .bg-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .bg-pattern-dark {
+            background-color: #1a202c; /* Gray-900 */
+            background-image: radial-gradient(#4a5568 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        h1, h2, h3 {
+            font-weight: 900;
+        }
+        .nav-link {
+            padding: 8px 16px;
+            border-radius: 9999px;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: 600;
+        }
+        .nav-link:hover {
+            background-color: #059669; /* Emerald-600 */
+            color: white;
+        }
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Barra de Navegación -->
+    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/CZ8c2R8V/Logo-UNAP.png" alt="Logo UNA Puno" class="h-12 w-auto">
+                <img src="https://i.postimg.cc/pp4LnYh5/Logo-LLPF.png" alt="Logo del programa de estudios de LLPF" class="h-12 w-auto">
+                <img src="https://i.postimg.cc/kVNx8K8D/3-Icono-2-tonos.png" alt="Logo de Lean Educative" class="h-10 w-auto">
+            </div>
+            <div class="hidden md:flex items-center space-x-1">
+                <a href="#inicio" class="nav-link text-gray-700">Inicio</a>
+                
+                <div class="relative group">
+                    <button class="nav-link text-gray-700 flex items-center">El Estudio <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></button>
+                    <div class="absolute hidden group-hover:block bg-white rounded-md shadow-lg w-64 z-50 top-full pt-2 max-h-96 overflow-y-auto">
+                        <a href="#introduccion" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">I. Introducción</a>
+                        <a href="#justificacion" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">II. Justificación</a>
+                        <a href="#objetivos" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">III. Objetivos</a>
+                        <a href="#metodologia" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">VI. Metodología</a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <button class="nav-link text-gray-700 flex items-center">Análisis Regional <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></button>
+                    <div class="absolute hidden group-hover:block bg-white rounded-md shadow-lg w-64 z-50 top-full pt-2 max-h-96 overflow-y-auto">
+                         <a href="#contexto" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">IV. Contexto Regional</a>
+                         <a href="#situacion-laboral" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">V. Situación Laboral</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-link text-gray-700 flex items-center">Demanda y Oferta <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></button>
+                    <div class="absolute hidden group-hover:block bg-white rounded-md shadow-lg w-72 z-50 top-full pt-2 max-h-[80vh] overflow-y-auto">
+                         <a href="#demanda-social-portada" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">VII. Demanda Social</a>
+                         <a href="#perspectiva-egresados-portada" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">VIII. Perspectiva Egresados</a>
+                         <a href="#mercado-ocupacional-portada" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">IX. Mercado Ocupacional</a>
+                         <a href="#oferta-educativa-portada" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">X. Oferta Educativa</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-link text-gray-700 flex items-center">Estrategia y Cierre <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></button>
+                    <div class="absolute hidden group-hover:block right-0 bg-white rounded-md shadow-lg w-72 z-50 top-full pt-2 max-h-[80vh] overflow-y-auto">
+                         <a href="#planteamiento-estrategico-portada" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">XI. Planteamiento Estratégico</a>
+                         <a href="#conclusiones-portada" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">XII. Conclusiones</a>
+                         <a href="#recomendaciones-portada" class="block px-4 py-2 text-sm font-bold text-emerald-600 hover:bg-gray-100">XIII. Recomendaciones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Diapositiva 1: Inicio (Carátula) -->
+    <section id="inicio" class="section bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=2070&auto=format&fit=crop');">
+        <div class="bg-black/70 absolute inset-0"></div>
+        <div class="relative text-center text-white p-8 rounded-lg max-w-4xl mx-auto">
+            <div class="flex justify-center items-center gap-x-8 mb-8">
+                <img src="https://i.postimg.cc/CZ8c2R8V/Logo-UNAP.png" alt="Logo UNA Puno" class="h-24 md:h-28 w-auto">
+                <img src="https://i.postimg.cc/pp4LnYh5/Logo-LLPF.png" alt="Logo del programa de estudios de LLPF" class="h-24 md:h-28 w-auto">
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-wider">Estudio de Demanda Social y Mercado Ocupacional</h1>
+            <h2 class="mt-4 text-3xl md:text-5xl font-bold text-emerald-300">Lengua, Literatura, Psicología y Filosofía</h2>
+            <p class="mt-6 text-lg md:text-xl font-light">Formando a los Humanistas que Liderarán la Transformación Educativa de Puno</p>
+
+            <div class="mt-12">
+                <p class="text-sm text-gray-300 mb-2">Un estudio realizado por:</p>
+                <img src="https://i.postimg.cc/sQYZQhBK/5-Logo-blanco-portada-pagina-web-01.png" alt="Logo de Lean Educative EIRL" class="h-20 md:h-24 w-auto mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 2: Introducción (Mejorada) -->
+    <section id="introduccion" class="section bg-pattern">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">I. INTRODUCCIÓN</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Formando Agentes de Cambio con Visión Humanista</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Este estudio es una herramienta estratégica para alinear la formación de docentes en humanidades con las demandas de Puno, buscando formar profesionales que impulsen el desarrollo regional.</p>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                 <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-xl mb-2 flex items-center"><i data-lucide="brain-circuit" class="w-6 h-6 mr-3 text-emerald-600"></i>Pensamiento Crítico y Habilidades Blandas</h4>
+                    <p class="text-gray-600">El programa busca desarrollar docentes con inteligencia emocional, empatía y habilidades interculturales para enfrentar los complejos desafíos del aula.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-xl mb-2 flex items-center"><i data-lucide="users" class="w-6 h-6 mr-3 text-emerald-600"></i>Respuesta a la Realidad Social</h4>
+                    <p class="text-gray-600">La formación está diseñada para abordar problemas como el bajo rendimiento académico y las brechas socioemocionales en los estudiantes de la región.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-xl mb-2 flex items-center"><i data-lucide="crosshair" class="w-6 h-6 mr-3 text-emerald-600"></i>Formación con Propósito</h4>
+                    <p class="text-gray-600">Formar profesionales que no solo dominen su disciplina, sino que también comprendan y transformen el contexto sociocultural de Puno.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-xl mb-2 flex items-center"><i data-lucide="bar-chart-3" class="w-6 h-6 mr-3 text-emerald-600"></i>Enfoque Basado en Evidencia</h4>
+                    <p class="text-gray-600">Utilizar datos concretos de la demanda social y el mercado para garantizar que la formación sea pertinente y de alto impacto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 3: Justificación (Mejorada) -->
+    <section id="justificacion" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">II. JUSTIFICACIÓN</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">¿Por Qué es Pertinente y Urgente este Programa?</h2>
+             <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-12">En una región con profundos desafíos sociales, la formación de docentes humanistas no es una opción, es una necesidad estratégica para el desarrollo y la equidad.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <i data-lucide="book-heart" class="w-12 h-12 mb-4 text-emerald-300"></i>
+                    <h4 class="font-bold text-xl mb-2">Respuesta a Brechas Educativas</h4>
+                    <p class="text-gray-300">El programa es fundamental para abordar los bajos logros de aprendizaje en lectura y fortalecer las habilidades socioemocionales post-pandemia.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <i data-lucide="anchor" class="w-12 h-12 mb-4 text-emerald-300"></i>
+                    <h4 class="font-bold text-xl mb-2">Motor de Empleo Formal</h4>
+                    <p class="text-gray-300">Frente a una informalidad laboral del 90.2%, la educación superior es el camino más seguro hacia un empleo digno para la juventud puneña.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <i data-lucide="users-2" class="w-12 h-12 mb-4 text-emerald-300"></i>
+                    <h4 class="font-bold text-xl mb-2">Enfoque Intercultural y de Género</h4>
+                    <p class="text-gray-300">Es esencial formar docentes que comprendan y valoren la diversidad de la región, promoviendo una educación inclusiva y equitativa.</p>
+                </div>
+                 <div class="glass-card p-8 rounded-xl text-left md:col-span-2 lg:col-span-3">
+                    <i data-lucide="trending-up" class="w-12 h-12 mb-4 text-emerald-300"></i>
+                    <h4 class="font-bold text-xl mb-2">Alta Demanda Vocacional</h4>
+                    <p class="text-gray-300">Como demuestra el estudio, esta especialidad es la más solicitada por los escolares de la región, lo que garantiza una base de postulantes motivados y comprometidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 4: Objetivos (Mejorada) -->
+    <section id="objetivos" class="section bg-pattern">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h3 class="text-base font-bold text-emerald-600 tracking-widest">III. OBJETIVOS</h3>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">La Hoja de Ruta del Estudio</h2>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-4 border-emerald-500 mb-10">
+                <h4 class="text-2xl font-bold text-emerald-800 mb-3 text-center">Objetivo General</h4>
+                <p class="text-lg text-gray-700 text-center">
+                    Fundamentar la pertinencia y el rediseño curricular del programa de <strong>LLPF</strong> a través de un análisis exhaustivo de la demanda social y las dinámicas del mercado ocupacional, para alinear la oferta formativa con las necesidades de desarrollo de la región.
+                </p>
+            </div>
+
+            <h4 class="text-2xl font-bold text-gray-800 mb-6 text-center">Objetivos Específicos</h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                <div class="bg-emerald-50 p-6 rounded-xl border-2 border-emerald-200 hover:shadow-lg transition-shadow">
+                    <i data-lucide="user-search" class="w-10 h-10 text-emerald-600 mb-4"></i>
+                    <h5 class="font-bold text-lg text-emerald-900">Diagnosticar la Demanda Social</h5>
+                    <p class="text-gray-600 mt-2">Cuantificar el interés real en el programa, identificando aspiraciones y barreras de los estudiantes de secundaria.</p>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-xl border-2 border-emerald-200 hover:shadow-lg transition-shadow">
+                    <i data-lucide="briefcase" class="w-10 h-10 text-emerald-600 mb-4"></i>
+                    <h5 class="font-bold text-lg text-emerald-900">Evaluar el Mercado Ocupacional</h5>
+                    <p class="text-gray-600 mt-2">Analizar las competencias demandadas por los empleadores y contrastarlas con el perfil de egreso actual.</p>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-xl border-2 border-emerald-200 hover:shadow-lg transition-shadow">
+                    <i data-lucide="swords" class="w-10 h-10 text-emerald-600 mb-4"></i>
+                    <h5 class="font-bold text-lg text-emerald-900">Analizar la Oferta y Competencia</h5>
+                    <p class="text-gray-600 mt-2">Mapear programas similares para identificar nuestra ventaja competitiva y posicionamiento estratégico.</p>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-xl border-2 border-emerald-200 hover:shadow-lg transition-shadow">
+                    <i data-lucide="lightbulb" class="w-10 h-10 text-emerald-600 mb-4"></i>
+                    <h5 class="font-bold text-lg text-emerald-900">Proponer Lineamientos Estratégicos</h5>
+                    <p class="text-gray-600 mt-2">Formular recomendaciones concretas para actualizar el plan de estudios y mejorar la empleabilidad de los egresados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 5: IV. Contexto Regional (Portada) -->
+    <section id="contexto" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">IV. CONTEXTO REGIONAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Puno: Un Diagnóstico Estratégico</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">Un análisis de las condiciones demográficas, sociales y económicas que enmarcan la necesidad del programa.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 6: 4.1 Reseña Histórica -->
+    <section id="historia" class="section bg-pattern">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">4.1 RESEÑA HISTÓRICA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Cuna de Civilizaciones y Cultura Viva</h2>
+            <p class="text-lg text-gray-600 text-left space-y-4 leading-relaxed">
+                El territorio de Puno fue el epicentro de culturas pre-incas como <strong>Pukara</strong> y <strong>Tiahuanaco</strong>. Posteriormente, los señoríos Lupaca y Colla dominaron el altiplano. Hoy, Puno es reconocido por su inmensa riqueza cultural, el Lago Titicaca y la <strong>Festividad de la Virgen de la Candelaria</strong>, Patrimonio de la Humanidad.
+            </p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 7: 4.2 y 4.4 Geografía y Territorio -->
+    <section id="ubicacion" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">4.2 Y 4.4 GEOGRAFÍA Y DIVISIÓN POLÍTICA</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Un Territorio de Contrastes y Oportunidades</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Superficie</h4>
+                    <p class="text-4xl font-bold text-emerald-300">71,999 km²</p>
+                    <p class="text-gray-300">13 provincias y 110 distritos.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Zonificación</h4>
+                    <p class="text-2xl font-bold text-emerald-300">88% Sierra Altoandina</p>
+                    <p class="text-gray-300">32% Zona de Selva.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Población Rural</h4>
+                    <p class="text-4xl font-bold text-red-400">-1.6%</p>
+                    <p class="text-gray-300">Tasa de decrecimiento en la última década.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 8: 4.3 Clima -->
+    <section id="clima" class="section bg-pattern">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">4.3 CLIMA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Diversidad Climática del Altiplano a la Selva</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <i data-lucide="sun-moon" class="w-12 h-12 text-emerald-600 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-xl mb-2">Suni y Puna</h4>
+                    <p class="text-gray-600">Frío y seco, con heladas frecuentes. El Lago Titicaca actúa como termorregulador.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <i data-lucide="snowflake" class="w-12 h-12 text-emerald-600 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-xl mb-2">Janca o Cordillera</h4>
+                    <p class="text-gray-600">Clima glacial, con temperaturas medias bajo cero y nevadas ocasionales.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <i data-lucide="leaf" class="w-12 h-12 text-emerald-600 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-xl mb-2">Selva Alta</h4>
+                    <p class="text-gray-600">Clima tropical, cálido, extremadamente húmedo y con lluvias intensas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 9: 4.5 Demografía -->
+    <section id="demografia" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">4.5 CARACTERÍSTICAS DEMOGRÁFICAS</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Población Joven con Desafíos Estructurales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <i data-lucide="users" class="w-12 h-12 text-emerald-300 mx-auto mb-3"></i>
+                    <p class="text-4xl font-bold">1.17 M</p>
+                    <p class="text-gray-300">Habitantes (4% del total nacional).</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <i data-lucide="trending-down" class="w-12 h-12 text-red-400 mx-auto mb-3"></i>
+                    <p class="text-4xl font-bold">-1.2%</p>
+                    <p class="text-gray-300">Tasa de crecimiento anual debido a migración.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <i data-lucide="heart-pulse" class="w-12 h-12 text-emerald-300 mx-auto mb-3"></i>
+                    <p class="text-4xl font-bold">74.6 años</p>
+                    <p class="text-gray-300">La esperanza de vida más baja del país.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 10: 4.6 Indicadores Sociales Críticos -->
+    <section id="social" class="section bg-pattern">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">4.6 INDICADORES SOCIALES CRÍTICOS</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Las Brechas que Justifican la Acción</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md border-b-4 border-red-500">
+                    <h4 class="font-bold text-xl mb-2">Pobreza Monetaria</h4>
+                    <p class="text-5xl font-bold text-red-600">41.3%</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md border-b-4 border-yellow-500">
+                    <h4 class="font-bold text-xl mb-2">Analfabetismo</h4>
+                    <p class="text-5xl font-bold text-yellow-600">10.5%</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md border-b-4 border-red-500">
+                    <h4 class="font-bold text-xl mb-2">Anemia Infantil</h4>
+                    <p class="text-5xl font-bold text-red-600">57.4%</p>
+                </div>
+                 <div class="stat-card bg-white p-6 rounded-lg shadow-md border-b-4 border-blue-500">
+                    <h4 class="font-bold text-xl mb-2">Educación</h4>
+                    <p class="text-5xl font-bold text-blue-600">"En Inicio"</p>
+                    <p class="text-gray-600 text-sm">Nivel promedio en matemáticas (ENLA 2023).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 11: 4.7 Actividad Económica -->
+    <section id="economia" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto">
+            <h3 class="text-base font-bold text-emerald-400 text-center tracking-widest">4.7 ACTIVIDAD ECONÓMICA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-100 my-4 text-center">Una Economía Dual y Primaria</h2>
+            <div class="grid lg:grid-cols-2 gap-8 items-center mt-12">
+                <div class="glass-card p-8 rounded-lg">
+                    <h4 class="font-bold text-2xl mb-4">Estructura del VAB Regional (2023)</h4>
+                    <ul class="space-y-3 text-lg">
+                        <li class="flex justify-between"><span>Otros Servicios</span> <span class="font-bold">24.7%</span></li>
+                        <li class="flex justify-between"><span>Agricultura y Ganadería</span> <span class="font-bold">14.1%</span></li>
+                        <li class="flex justify-between"><span>Comercio</span> <span class="font-bold">13.1%</span></li>
+                        <li class="flex justify-between"><span>Administración Pública</span> <span class="font-bold">9.1%</span></li>
+                    </ul>
+                </div>
+                <div class="text-center lg:text-left">
+                    <i data-lucide="bar-chart-3" class="w-20 h-20 text-emerald-300 mx-auto lg:mx-0 mb-4"></i>
+                    <p class="text-xl text-gray-300">Aporta solo el <strong>2.1% al PBI nacional</strong>. El sector agropecuario emplea al <strong>45% de la PEA</strong>, evidenciando una economía de subsistencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 12: V. Situación Laboral (Portada) -->
+    <section id="situacion-laboral" class="section bg-pattern">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">V. SITUACIÓN LABORAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">El Mercado Ocupacional de Puno</h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">Un entorno laboral precario donde la educación superior es la principal herramienta para el empleo formal.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 13: 5.1 Tasa de Actividad -->
+    <section id="tasa-actividad" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">5.1 TASA DE ACTIVIDAD</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Alta Participación por Necesidad</h2>
+            <div class="glass-card p-8 rounded-lg mt-8">
+                <p class="text-6xl font-black text-emerald-300">74.8%</p>
+                <p class="text-xl text-gray-300 mt-2">Tasa de actividad económica en 2023, <strong>superior al promedio nacional (72.2%)</strong>. Sin embargo, la PEA total se contrajo, especialmente en mujeres, reflejando una participación motivada por la necesidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 14: 5.2 Tasa de Ocupación -->
+    <section id="tasa-ocupacion" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">5.2 TASA DE OCUPACIÓN</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Un Espejismo de Empleabilidad</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-5xl font-bold text-emerald-600">>95%</p>
+                    <p class="text-gray-600 mt-2">Tasa de ocupación entre 2017 y 2023, una cifra aparentemente alta.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md border-b-4 border-red-500">
+                    <p class="text-5xl font-bold text-red-600">27.9%</p>
+                    <p class="text-gray-600 mt-2">Solo este porcentaje tenía un <strong>empleo adecuado</strong> en 2023, cifra en descenso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 15: 5.3 PEA Subempleada -->
+    <section id="subempleo" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">5.3 PEA SUBEMPLEADA E INFORMALIDAD</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">El Rostro de la Precariedad</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mt-8">
+                <div class="text-center">
+                    <p class="text-8xl font-black text-red-400">90.2%</p>
+                    <p class="text-2xl font-bold mt-2">Tasa de Informalidad (2022)</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-8xl font-black text-red-400">68.3%</p>
+                    <p class="text-2xl font-bold mt-2">Tasa de Subempleo (2023)</p>
+                </div>
+            </div>
+            <p class="text-xl mt-12 max-w-3xl mx-auto">La <strong>educación superior es el factor clave</strong>. Solo el 5.2% con primaria accede a empleo formal, frente al <strong>61.8% con estudios superiores</strong>.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 16: VI. Metodología (Mejorada) -->
+    <section id="metodologia" class="section bg-pattern">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">VI. METODOLOGÍA DEL ESTUDIO</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Un Enfoque 360° Basado en Evidencia</h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">Se empleó una metodología mixta para analizar a los grupos de interés clave, garantizando la rigurosidad y representatividad de los resultados.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center"><i data-lucide="school" class="w-12 h-12 mx-auto text-emerald-500 mb-3"></i><h4 class="font-bold">Escolares</h4><p>(4to y 5to)</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center"><i data-lucide="user" class="w-12 h-12 mx-auto text-emerald-500 mb-3"></i><h4 class="font-bold">Estudiantes</h4><p>(del Programa)</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center"><i data-lucide="graduation-cap" class="w-12 h-12 mx-auto text-emerald-500 mb-3"></i><h4 class="font-bold">Egresados</h4></div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center"><i data-lucide="briefcase" class="w-12 h-12 mx-auto text-emerald-500 mb-3"></i><h4 class="font-bold">Empleadores</h4></div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center"><i data-lucide="award" class="w-12 h-12 mx-auto text-emerald-500 mb-3"></i><h4 class="font-bold">Colegio Profesional</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 17: 6.1 Metodología Escolares -->
+    <section id="metodologia-escolares" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">6.1 METODOLOGÍA: DEMANDA SOCIAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Escuchando a los Futuros Postulantes</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Universo y Muestra</h4>
+                    <p class="text-5xl font-bold text-emerald-300">40,618</p>
+                    <p class="text-gray-300 mt-2">Estudiantes de 4to y 5to (Universo)</p>
+                    <p class="text-4xl font-bold text-emerald-300 mt-4">679</p>
+                    <p class="text-gray-300 mt-2">Encuestas válidas obtenidas</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Instrumento y Enfoque</h4>
+                    <p class="text-2xl font-bold text-emerald-300">Encuesta Digital</p>
+                    <p class="text-gray-300">Para medir aspiraciones y preferencias.</p>
+                    <p class="text-2xl font-bold text-emerald-300 mt-4">Cuantitativo-Descriptivo</p>
+                    <p class="text-gray-300">Para analizar los datos de forma estadística.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 18: 6.2 Metodología Egresados -->
+    <section id="metodologia-egresados" class="section bg-pattern">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">6.2 METODOLOGÍA: MERCADO OCUPACIONAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">La Perspectiva de los Egresados</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Población y Muestra</h4>
+                    <p class="text-gray-700">Egresados del programa</p>
+                    <p class="text-5xl font-bold text-emerald-600 mt-2">20</p>
+                    <p class="text-gray-600">Egresados participantes</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Instrumento y Enfoque</h4>
+                    <p class="text-2xl font-bold text-emerald-600">Focus Group</p>
+                    <p class="text-gray-600">Para explorar experiencias y percepciones.</p>
+                    <p class="text-2xl font-bold text-emerald-600 mt-2">Cualitativo-Descriptivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 19: 6.3 Metodología Empleadores -->
+    <section id="metodologia-empleadores" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">6.3 METODOLOGÍA: MERCADO OCUPACIONAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">La Visión de los Empleadores</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Población y Muestra</h4>
+                    <p class="text-gray-300">Directivos de II.EE. y UGELs</p>
+                    <p class="text-5xl font-bold text-emerald-300 mt-2">17</p>
+                    <p class="text-gray-300">Empleadores participantes</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Instrumento y Enfoque</h4>
+                    <p class="text-2xl font-bold text-emerald-300">Focus Group</p>
+                    <p class="text-gray-300">Para identificar competencias demandadas.</p>
+                    <p class="text-2xl font-bold text-emerald-300 mt-2">Cualitativo-Descriptivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 20: 6.4 Metodología Colegio Profesional -->
+    <section id="metodologia-colegio" class="section bg-pattern">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">6.4 METODOLOGÍA: MERCADO OCUPACIONAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">La Voz del Colegio Profesional</h2>
+            <div class="stat-card bg-white p-8 rounded-lg shadow-xl mt-8">
+                <i data-lucide="award" class="w-16 h-16 text-emerald-600 mx-auto mb-4"></i>
+                <p class="text-2xl font-bold text-emerald-800">Encuesta Estructurada</p>
+                <p class="text-lg text-gray-600 mt-2">Aplicada al Decano del Colegio de Profesores del Perú - Consejo Regional Puno para obtener una visión experta sobre la demanda y las competencias requeridas en el campo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 21: 6.5 Metodología Estudiantes del Programa -->
+    <section id="metodologia-estudiantes" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">6.5 METODOLOGÍA: OFERTA EDUCATIVA</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">La Perspectiva de los Estudiantes Actuales</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Universo y Muestra</h4>
+                    <p class="text-5xl font-bold text-emerald-300">180</p>
+                    <p class="text-gray-300 mt-2">Estudiantes del VI al X semestre (Universo)</p>
+                    <p class="text-4xl font-bold text-emerald-300 mt-4">137</p>
+                    <p class="text-gray-300 mt-2">Encuestas válidas obtenidas</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Instrumento y Enfoque</h4>
+                    <p class="text-2xl font-bold text-emerald-300">Encuesta Digital</p>
+                    <p class="text-gray-300">Para evaluar la percepción sobre la formación.</p>
+                    <p class="text-2xl font-bold text-emerald-300 mt-4">Cuantitativo-Descriptivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 22: VII. Demanda Social (Portada) -->
+    <section id="demanda-social-portada" class="section bg-pattern">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">VII. DEMANDA SOCIAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">La Voz del Entorno: Necesidades y Aspiraciones</h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">Análisis del interés de los futuros postulantes y la visión de los estudiantes actuales para fundamentar la pertinencia del programa.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 23: 7.1 Población Objetivo -->
+    <section id="demanda-poblacion-objetivo" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">7.1 CARACTERÍSTICAS DE LA POBLACIÓN OBJETIVO</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">El Pulso de la Futura Generación</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">Se encuestó a 679 estudiantes de 4to y 5to de secundaria para comprender sus aspiraciones, motivaciones y las barreras que enfrentan.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 24: 7.1.1 Perfil Sociodemográfico Escolares -->
+    <section id="demanda-sociodemografico-escolares" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">7.1.1 PERFIL SOCIODEMOGRÁFICO (ESCOLARES)</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">¿Quiénes son los Futuros Postulantes?</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Edad</h4>
+                    <p class="text-4xl font-bold text-emerald-600">15-16 años</p>
+                    <p class="text-gray-600 mt-1">Es el rango de edad predominante.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Género</h4>
+                    <p class="text-2xl font-bold text-emerald-600">52.4% Femenino</p>
+                    <p class="text-gray-600">47.6% Masculino.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Origen</h4>
+                    <p class="text-4xl font-bold text-emerald-600">90.7%</p>
+                    <p class="text-gray-600 mt-1">Proviene de colegios públicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 25: 7.1.2 Acceso a Información -->
+    <section id="demanda-acceso-informacion" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">7.1.2 INFLUENCIA Y ACCESO A INFORMACIÓN</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Canales de Orientación Vocacional</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Fuentes Actuales</h4>
+                    <p>Internet y páginas web (393 menciones), seguido de familiares y amigos (326 menciones).</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Canales Preferidos</h4>
+                    <p>Visitas guiadas a la universidad (375 menciones) y conferencias en su propio colegio (338 menciones).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 26: 7.2 Demanda del Programa -->
+    <section id="demanda-programa" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">7.2 DEMANDA DEL PROGRAMA DE ESTUDIOS</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">LLPF: La Opción #1 en Educación</h2>
+            <div class="stat-card bg-white p-8 rounded-lg shadow-xl mt-8">
+                <p class="text-8xl font-black text-emerald-600">#1</p>
+                <p class="text-2xl font-bold mt-2">ESPECIALIDAD MÁS SOLICITADA</p>
+                <p class="text-lg text-gray-600 mt-4">Con <strong>217 menciones</strong>, el programa de LLPF se posiciona como la primera opción dentro del área de Educación, superando a todas las demás especialidades y confirmando una demanda social fuerte y validada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 27: 7.3 Estudiante Actual (Portada) -->
+    <section id="demanda-estudiante-actual" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">7.3 CARACTERÍSTICAS DEL ESTUDIANTE ACTUAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Visión Interna: Motivados pero Críticos</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">Se encuestó a 137 estudiantes del programa para conocer su percepción sobre la formación que reciben.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 28: 7.3.1 Perfil Sociodemográfico Estudiantes -->
+    <section id="demanda-sociodemografico-estudiantes" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">7.3.1 PERFIL SOCIODEMOGRÁFICO (ESTUDIANTES)</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">¿Quiénes son los Estudiantes de LLPF?</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Género</h4>
+                    <p class="text-5xl font-bold text-emerald-600">75.9%</p>
+                    <p class="text-gray-600 mt-1">Son mujeres.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Edad</h4>
+                    <p class="text-5xl font-bold text-emerald-600">62.8%</p>
+                    <p class="text-gray-600 mt-1">Tiene entre 20 y 25 años.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Procedencia</h4>
+                    <p class="text-5xl font-bold text-emerald-600">34.3%</p>
+                    <p class="text-gray-600 mt-1">Proviene de la provincia de Puno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 29: 7.3.2 Experiencia Profesional Estudiantes -->
+    <section id="demanda-experiencia-laboral" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">7.3.2 EJERCICIO PROFESIONAL Y EXPERIENCIA</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Motivación y Aspiraciones del Futuro Docente</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Principal Motivación</h4>
+                    <p class="text-5xl font-bold text-emerald-300">84.1%</p>
+                    <p class="text-gray-300 mt-2">La <strong>vocación de enseñar</strong> es el motor principal.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Mayor Aspiración</h4>
+                    <p class="text-5xl font-bold text-emerald-300">61.3%</p>
+                    <p class="text-gray-300 mt-2">Aspira a <strong>trabajar en una institución pública</strong> al egresar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 30: 7.3.3 Formación Académica Estudiantes -->
+    <section id="demanda-formacion-academica" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">7.3.3 FORMACIÓN ACADÉMICA Y CAPACITACIÓN</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Una Visión Crítica sobre la Preparación Recibida</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md border-b-4 border-yellow-500">
+                    <h4 class="font-bold text-xl mb-2">Currículo Desactualizado</h4>
+                    <p class="text-gray-700">Un alarmante <strong>50.4%</strong> califica el plan de estudios como "poco actualizado" o "desactualizado".</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Áreas a Fortalecer</h4>
+                    <p class="text-gray-700">Desean mayor preparación en <strong>investigación educativa (51.1%)</strong> y <strong>estrategias metodológicas (48.2%)</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 31: 7.3.4 Percepción Mercado Laboral Estudiantes -->
+    <section id="demanda-percepcion-mercado" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">7.3.4 PERCEPCIÓN DEL MERCADO LABORAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Conscientes de los Retos, Comprometidos con la Región</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Demanda Laboral</h4>
+                    <p>La perciben como <strong>"moderada"</strong> (65.7%).</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Retos Anticipados</h4>
+                    <p>La <strong>falta de plazas estables</strong> (59.1%) es su mayor preocupación.</p>
+                </div>
+            </div>
+             <div class="mt-8 bg-green-800/50 p-6 rounded-lg border-l-4 border-green-400 text-left max-w-3xl mx-auto">
+                 <h4 class="font-bold text-xl mb-2 flex items-center"><i data-lucide="map-pin" class="w-6 h-6 mr-3 text-green-300"></i>Dato Estratégico: Compromiso Rural</h4>
+                 <p class="text-gray-200">Un impresionante <strong>92%</strong> está dispuesto a trabajar en zonas rurales, representando un valioso capital humano para la región.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 32: 7.4 Fortalezas del Estudiante -->
+    <section id="demanda-fortalezas" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-6xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">7.4 FORTALEZAS DEL ESTUDIANTE DEL PROGRAMA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Capital Humano Comprometido y con Visión</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Alta Vocación de Servicio</h4>
+                    <p class="text-5xl font-bold text-emerald-600">84.1%</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Aspiración a la Formación Continua</h4>
+                    <p class="text-5xl font-bold text-emerald-600">83.2%</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Compromiso Social y Rural</h4>
+                    <p class="text-5xl font-bold text-emerald-600">92%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 33: 7.5 Puntos de Mejora -->
+    <section id="demanda-mejoras" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">7.5 PUNTOS DE MEJORA DEL ESTUDIANTE</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Oportunidades para Crecer</h2>
+            <div class="glass-card p-8 rounded-lg mt-8 text-left">
+                <ul class="space-y-4 text-lg">
+                    <li class="flex items-start"><i data-lucide="book-open-check" class="w-8 h-8 mr-4 text-emerald-300 flex-shrink-0"></i><span><strong>Mayor preparación en estrategias pedagógicas prácticas.</strong></span></li>
+                    <li class="flex items-start"><i data-lucide="refresh-cw" class="w-8 h-8 mr-4 text-emerald-300 flex-shrink-0"></i><span><strong>Actualización de contenidos en Psicología y Filosofía.</strong></span></li>
+                    <li class="flex items-start"><i data-lucide="building" class="w-8 h-8 mr-4 text-emerald-300 flex-shrink-0"></i><span><strong>Modernización de la infraestructura y recursos bibliográficos.</strong></span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 34: VIII. Perspectiva Egresados (Portada) -->
+    <section id="perspectiva-egresados-portada" class="section bg-pattern">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">VIII. PERSPECTIVA DE LOS EGRESADOS</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">La Realidad Después de las Aulas</h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">La visión de 20 egresados sobre su inserción laboral, la pertinencia de su formación y los desafíos del mercado.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 35: 8.1 Características Generales del Egresado -->
+    <section id="egresados-caracteristicas" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">8.1 CARACTERÍSTICAS GENERALES DEL EGRESADO</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">El Docente en el Campo Laboral</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">El egresado de LLPF se caracteriza por una alta inserción laboral impulsada por la vocación, pero enfrenta un mercado con alta competencia y condiciones precarias.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 36: 8.1.1 Perfil Sociodemográfico Egresados -->
+    <section id="egresados-sociodemografico" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">8.1.1 PERFIL SOCIODEMOGRÁFICO (EGRESADOS)</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">¿Quiénes son Nuestros Egresados?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Edad</h4>
+                    <p class="text-5xl font-bold text-emerald-600">55%</p>
+                    <p class="text-gray-600 mt-1">Tiene entre 26 y 35 años.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Género</h4>
+                    <p class="text-5xl font-bold text-emerald-600">65%</p>
+                    <p class="text-gray-600 mt-1">Son mujeres.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Empleabilidad</h4>
+                    <p class="text-5xl font-bold text-emerald-600">85%</p>
+                    <p class="text-gray-600 mt-1">Trabaja en su especialidad.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Sector</h4>
+                    <p class="text-5xl font-bold text-emerald-600">81.3%</p>
+                    <p class="text-gray-600 mt-1">Trabaja en el sector público.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 37: 8.1.2 Aspiraciones Egresados -->
+    <section id="egresados-aspiraciones" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">8.1.2 EXPECTATIVAS Y ASPIRACIONES</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Vocación vs. Realidad del Mercado</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Motivación Principal</h4>
+                    <p class="text-gray-200 mt-2">La <strong>vocación</strong> sigue siendo el principal motor, superando a factores como el ingreso o la estabilidad.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg border-l-4 border-red-500">
+                    <h4 class="font-bold text-xl mb-2">Principal Barrera</h4>
+                    <p class="text-gray-200 mt-2">La <strong>alta competencia</strong> y la <strong>falta de recursos</strong> en las escuelas son los mayores obstáculos que enfrentan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 38: 8.1.3 y 8.1.4 Formación Académica Egresados -->
+    <section id="egresados-formacion" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">8.1.3 Y 8.1.4 EXPERIENCIA Y FORMACIÓN ACADÉMICA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Una Percepción Crítica de la Formación Recibida</h2>
+            <div class="stat-card bg-white p-8 rounded-lg shadow-xl mt-8 border-b-4 border-yellow-500">
+                <p class="text-8xl font-black text-yellow-600">65%</p>
+                <p class="text-2xl font-bold mt-2">Se sintió solo "MODERADAMENTE PREPARADO" al egresar.</p>
+                <p class="text-lg text-gray-600 mt-4">Coinciden con los estudiantes actuales: valoran la base teórica pero critican la <strong>falta de preparación práctica</strong> y la <strong>desactualización de contenidos</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 39: 8.1.5 Formación Continua Egresados -->
+    <section id="egresados-formacion-continua" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">8.1.5 FORMACIÓN CONTINUA Y ESPECIALIZACIÓN</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Una Necesidad Imperativa</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Importancia</h4>
+                    <p class="text-5xl font-bold text-emerald-300">100%</p>
+                    <p class="text-gray-300 mt-2">Considera la especialización como "muy importante".</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Accesibilidad</h4>
+                    <p class="text-5xl font-bold text-emerald-300">60%</p>
+                    <p class="text-gray-300 mt-2">Percibe el acceso a la formación continua como "medianamente accesible".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 40: 8.1.6 Percepción del Mercado Egresados -->
+    <section id="egresados-percepcion-mercado" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">8.1.6 PERCEPCIÓN DEL MERCADO Y LA DEMANDA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Demanda Alta, Competencia Feroz</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Demanda de Docentes</h4>
+                    <p class="text-gray-700">El <strong>50%</strong> la considera "alta" y el <strong>45%</strong> "moderada".</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Brecha Urbano-Rural</h4>
+                    <p class="text-gray-700">Reconocen una fuerte diferencia en la demanda entre zonas urbanas y rurales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 41: 8.2 Perfil del que Trabaja -->
+    <section id="egresados-perfil-trabaja" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">8.2 PERFIL DEL EGRESADO QUE TRABAJA</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">El Docente en Acción</h2>
+            <div class="glass-card p-8 rounded-lg mt-8 text-left">
+                <p class="text-lg text-gray-200">Profesional joven (26-35 años), con alta vocación, insertado mayoritariamente en el <strong>sector público</strong> bajo <strong>contratos temporales</strong>. A pesar de la falta de recursos, valora la demanda de su especialidad y la oportunidad de generar impacto social. Reconoce la necesidad de actualizarse constantemente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 42: 8.3 Perfil del que No Trabaja -->
+    <section id="egresados-perfil-no-trabaja" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">8.3 PERFIL DEL EGRESADO QUE NO TRABAJA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Una Inserción Retrasada, No Abandonada</h2>
+            <div class="stat-card bg-white p-8 rounded-lg shadow-xl mt-8 border-l-4 border-emerald-500">
+                <p class="text-lg text-gray-700">El 15% de los egresados no ejerce. La razón no es la falta de empleo, sino <strong>barreras administrativas</strong>. El <strong>100%</strong> de este grupo está en proceso de <strong>tesis o titulación</strong>. Mantienen su vocación docente y buscan activamente la inserción una vez superado el obstáculo formal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 43: IX. Mercado Ocupacional (Portada) -->
+    <section id="mercado-ocupacional-portada" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">IX. MERCADO OCUPACIONAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">La Perspectiva de los Empleadores</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">Análisis basado en la visión de 17 empleadores clave (directivos de II.EE. y UGELs) para identificar la demanda real y las competencias valoradas.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 44: 9.1 Características de los Demandantes -->
+    <section id="mercado-caracteristicas" class="section bg-pattern">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">9.1 CARACTERÍSTICAS DE LOS DEMANDANTES</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">El Perfil de Quienes Contratan</h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">Los empleadores son profesionales con una vasta experiencia en el sector educativo, lo que otorga una gran solidez a sus percepciones y demandas.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 45: 9.1.1 Perfil Sociodemográfico Empleadores -->
+    <section id="mercado-sociodemografico" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">9.1.1 PERFIL SOCIODEMOGRÁFICO (EMPLEADORES)</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Líderes con Experiencia Consolidada</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-lg mb-2">Edad</h4>
+                    <p class="text-4xl font-bold text-emerald-300">58.8%</p>
+                    <p class="text-gray-300 mt-1">Tiene 51 años o más.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-lg mb-2">Género</h4>
+                    <p class="text-4xl font-bold text-emerald-300">82.4%</p>
+                    <p class="text-gray-300 mt-1">Masculino.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-lg mb-2">Experiencia</h4>
+                    <p class="text-4xl font-bold text-emerald-300">64.7%</p>
+                    <p class="text-gray-300 mt-1">Más de 15 años.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-lg mb-2">Sector</h4>
+                    <p class="text-4xl font-bold text-emerald-300">82.4%</p>
+                    <p class="text-gray-300 mt-1">Público.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 46: 9.1.2 Experiencia Profesional Empleadores -->
+    <section id="mercado-experiencia" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">9.1.2 EJERCICIO PROFESIONAL Y EXPERIENCIA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Valoración Positiva con Áreas de Mejora</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Calidad del Desempeño</h4>
+                    <p class="text-5xl font-bold text-emerald-600">82.4%</p>
+                    <p class="text-gray-600 mt-2">Califica el desempeño de los egresados de la UNA como "Positivo".</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Especialidad Predominante</h4>
+                    <p class="text-5xl font-bold text-emerald-600">70.6%</p>
+                    <p class="text-gray-600 mt-2">Indica que la especialidad más común en sus instituciones es Lengua y Literatura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 47: 9.1.3 Condiciones Laborales Empleadores -->
+    <section id="mercado-condiciones" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">9.1.3 CONDICIONES LABORALES Y RECURSOS</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">La Brecha de Recursos y la Riqueza Cultural</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="glass-card p-6 rounded-lg border-l-4 border-yellow-400">
+                    <h4 class="font-bold text-xl mb-2">Acceso a Recursos</h4>
+                    <p class="text-5xl font-bold text-yellow-300">58.8%</p>
+                    <p class="text-gray-300 mt-2">Considera que el acceso a recursos pedagógicos y tecnológicos es solo "Parcial".</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2">Idiomas Adicionales</h4>
+                    <p class="text-gray-200 mt-2">El <strong>Quechua (70.6%)</strong> y el <strong>Aymara (47.1%)</strong> son altamente valorados como competencias relevantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 48: 9.1.4 Formación Continua Empleadores -->
+    <section id="mercado-formacion" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">9.1.4 FORMACIÓN Y CAPACITACIÓN CONTINUA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">La Demanda por un Perfil Integral</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Habilidades a Fortalecer</h4>
+                    <p class="text-gray-700">Se prioriza el <strong>Pensamiento Crítico (82.4%)</strong>, las <strong>Habilidades Interpersonales (76.5%)</strong> y la <strong>Competencia Comunicativa (70.6%)</strong>.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Cumplimiento del Perfil</h4>
+                    <p class="text-5xl font-bold text-emerald-600">76.5%</p>
+                    <p class="text-gray-600 mt-2">Considera que los egresados cumplen con el perfil esperado "en la mayoría de los casos".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 49: 9.1.5 Demanda de Servicios -->
+    <section id="mercado-demanda-servicios" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">9.1.5 DEMANDA DE SERVICIOS Y FACTORES ECONÓMICOS</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Un Mercado Activo y Diferenciado</h2>
+            <div class="glass-card p-8 rounded-lg mt-8">
+                <p class="text-6xl font-black text-emerald-300">70.6%</p>
+                <p class="text-xl text-gray-300 mt-2">De los empleadores percibe la demanda de docentes de la especialidad como <strong>"Alta"</strong>.</p>
+                <p class="text-lg text-gray-400 mt-4">El <strong>82.4%</strong> afirma que existen diferencias significativas en la demanda entre zonas urbanas y rurales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 50: 9.1.6 Problemas y Soluciones -->
+    <section id="mercado-problemas" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">9.1.6 PROBLEMAS Y ALTERNATIVAS DE SOLUCIÓN</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">El Veredicto de los Empleadores</h2>
+            <div class="stat-card bg-white p-8 rounded-lg shadow-xl mt-8 border-l-4 border-red-500">
+                <h4 class="font-bold text-2xl mb-2 text-red-700">Principal Problema Identificado</h4>
+                <p class="text-lg text-gray-700">El <strong>58.8%</strong> de los empleadores señala la <strong>falta de compromiso y vocación</strong> como el principal problema en los docentes.</p>
+                <hr class="my-4">
+                <h4 class="font-bold text-2xl mb-2 text-emerald-700">Solución Propuesta</h4>
+                <p class="text-lg text-gray-700">Fortalecer la formación práctica y la vocación desde la universidad, con un mayor énfasis en el desarrollo de habilidades blandas y compromiso social.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 51: 9.1.7 Percepción del Futuro -->
+    <section id="mercado-futuro" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">9.1.7 PERCEPCIÓN DEL FUTURO DE LA DOCENCIA</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Un Futuro Prometedor, Condicionado a Mejoras</h2>
+            <div class="glass-card p-8 rounded-lg mt-8">
+                <p class="text-6xl font-black text-emerald-300">64.7%</p>
+                <p class="text-xl text-gray-300 mt-2">De los empleadores considera que el futuro de la docencia en la especialidad es <strong>"Prometedor"</strong>.</p>
+                <p class="text-lg text-gray-400 mt-4">Para que este futuro se concrete, es necesario fortalecer la formación en <strong>valores, ética y compromiso social</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 52: 9.2 Competencias Demandadas -->
+    <section id="mercado-competencias" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">9.2 COMPETENCIAS DEMANDADAS DEL EGRESADO</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">El Perfil del Docente Integral del Futuro</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg"><h4 class="font-bold text-xl text-emerald-800">Habilidades Socioemocionales</h4></div>
+                <div class="stat-card bg-white p-6 rounded-lg"><h4 class="font-bold text-xl text-emerald-800">Pensamiento Crítico</h4></div>
+                <div class="stat-card bg-white p-6 rounded-lg"><h4 class="font-bold text-xl text-emerald-800">Competencia Comunicativa e Intercultural</h4></div>
+                <div class="stat-card bg-white p-6 rounded-lg"><h4 class="font-bold text-xl text-emerald-800">Manejo de TICs</h4></div>
+                <div class="stat-card bg-white p-6 rounded-lg"><h4 class="font-bold text-xl text-emerald-800">Dominio Disciplinar</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 53: 9.3 y 9.4 Demanda Laboral Nacional -->
+    <section id="mercado-demanda-nacional" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">9.3 Y 9.4 DEMANDA LABORAL NACIONAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Un Campo Fértil a Nivel Nacional</h2>
+            <div class="glass-card p-8 rounded-lg mt-8">
+                <p class="text-6xl font-black text-emerald-300">230,741</p>
+                <p class="text-xl text-gray-300 mt-2">Docentes de Educación Secundaria a nivel nacional (2024), con una necesidad constante de renovación y especialización.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 54: 9.5 Demanda Laboral Regional -->
+    <section id="mercado-demanda-regional" class="section bg-pattern">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">9.5 DEMANDA LABORAL REGIONAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Oportunidades Constantes en Puno</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Docentes de Secundaria</h4>
+                    <p class="text-5xl font-bold text-emerald-600">11,319</p>
+                    <p class="text-gray-600 mt-2">Plazas docentes en la región (EBR y EBA).</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Servicios Educativos</h4>
+                    <p class="text-5xl font-bold text-emerald-600">660</p>
+                    <p class="text-gray-600 mt-2">Instituciones de nivel secundario que demandan profesionales.</p>
+                </div>
+            </div>
+             <div class="mt-8 bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500 text-left max-w-3xl mx-auto">
+                 <h4 class="font-bold text-xl mb-2 flex items-center"><i data-lucide="map-pin" class="w-6 h-6 mr-3 text-emerald-600"></i>Enfoque Rural</h4>
+                 <p class="text-gray-700">El <strong>77.7%</strong> de los servicios educativos son públicos y el <strong>60.8%</strong> son rurales, representando el principal nicho de mercado y oportunidad de impacto social.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 55: X. Oferta Educativa (Portada) -->
+    <section id="oferta-educativa-portada" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">X. OFERTA EDUCATIVA PROFESIONAL</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Nuestra Posición en el Mercado</h2>
+        </div>
+    </section>
+
+    <!-- Diapositiva 56: 10.1 Competencia Educativa -->
+    <section id="oferta-competencia" class="section bg-pattern">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">10.1 COMPETENCIA EDUCATIVA</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Una Propuesta de Valor Única</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">A nivel nacional, nos posicionamos como un actor estratégico clave, ya que muchas de las universidades TOP del Perú (PUCP, UPCH, etc.) NO OFRECEN esta especialidad, dejando una brecha de formación que la UNA Puno está en una posición privilegiada para cubrir.</p>
+            <div class="stat-card bg-white p-8 rounded-lg shadow-xl mt-8">
+                <h4 class="font-bold text-2xl mb-2 text-emerald-800">Ventaja Competitiva Regional</h4>
+                <p class="text-lg text-gray-700">Nuestro programa integrado (LLPF) supera a la oferta de los IESP de Puno, que se centran solo en "Comunicación", ofreciendo un perfil más completo y humanista.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 57: 10.2 Programas Similares -->
+    <section id="oferta-similares" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">10.2 PROGRAMAS SIMILARES</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Análisis Comparativo en el Sur del Perú</h2>
+            <div class="glass-card p-8 rounded-lg mt-8 overflow-x-auto">
+                <table class="min-w-full text-left">
+                    <thead class="border-b border-emerald-400">
+                        <tr>
+                            <th class="py-2 px-4">Universidad</th>
+                            <th class="py-2 px-4">Especialidades Relacionadas</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr><td class="py-2 px-4 font-bold">UNSAAC (Cusco)</td><td class="py-2 px-4">Ciencias Sociales, Informática Educativa.</td></tr>
+                        <tr class="bg-white/5"><td class="py-2 px-4 font-bold">UNJBG (Tacna)</td><td class="py-2 px-4">Ciencias Sociales, Idioma Extranjero.</td></tr>
+                        <tr><td class="py-2 px-4 font-bold">UNAMAD (Madre de Dios)</td><td class="py-2 px-4">No ofrece programas directamente comparables en estas humanidades.</td></tr>
+                    </tbody>
+                </table>
+                 <p class="text-sm text-gray-400 mt-4 text-center">El programa de la UNA Puno destaca por su integración única de cuatro disciplinas humanistas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 58: 10.3 Programas No Ofertados -->
+    <section id="oferta-no-ofertados" class="section bg-pattern">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">10.3 PROGRAMAS NO OFERTADOS</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Oportunidades de Diversificación para la UNA Puno</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">La ausencia de ciertos programas de alta demanda en la UNA Puno refuerza la importancia de fortalecer y consolidar las carreras únicas y estratégicas como LLPF.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Ciencias de la Salud</h4>
+                    <p>Obstetricia, Tecnología Médica, Terapia Física, Psicología.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Ciencias Empresariales</h4>
+                    <p>Marketing, Negocios Internacionales.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-xl mb-2">Artes y Humanidades</h4>
+                    <p>Diseño Gráfico, Música, Artes Plásticas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 59: XI. Planteamiento Estratégico (Portada) -->
+    <section id="planteamiento-estrategico-portada" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">XI. PLANTEAMIENTO ESTRATÉGICO</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Definiendo el Futuro del Programa</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">Se propone una estrategia combinada de diferenciación por innovación (enfoque tecno-pedagógico y humanista) y un enfoque territorial (atendiendo las necesidades de la educación rural e intercultural de Puno).</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 60: 11.1 Liderazgo en Costos -->
+    <section id="estrategia-costos" class="section bg-pattern">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">11.1 ESTRATEGIA DE LIDERAZGO EN COSTOS</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Formación de Calidad con Acceso Universal</h2>
+            <p class="text-lg text-gray-600 mb-8">Ofrecer una formación de alta calidad a un bajo costo, garantizando el acceso a amplios sectores de la población, especialmente de zonas rurales y con limitados recursos.</p>
+            <div class="text-left space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md"><i data-lucide="shield-check" class="inline w-6 h-6 mr-2 text-emerald-600"></i><strong>Ventaja Competitiva:</strong> Costo accesible como universidad pública, sin sacrificar la calidad académica y el prestigio institucional.</div>
+                <div class="bg-white p-4 rounded-lg shadow-md"><i data-lucide="cpu" class="inline w-6 h-6 mr-2 text-emerald-600"></i><strong>Acción Clave:</strong> Uso intensivo de tecnologías abiertas y software libre para reducir costos de licencias y materiales.</div>
+                <div class="bg-white p-4 rounded-lg shadow-md"><i data-lucide="handshake" class="inline w-6 h-6 mr-2 text-emerald-600"></i><strong>Acción Clave:</strong> Fortalecer alianzas con UGELs para prácticas preprofesionales de alto valor formativo y bajo costo.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 61: 11.2 Diferenciación -->
+    <section id="estrategia-diferenciacion" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">11.2 ESTRATEGIA DE DIFERENCIACIÓN</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Una Propuesta de Valor Única y Pertinente</h2>
+            <p class="text-lg text-gray-300 mb-8">Desarrollar atributos únicos y altamente valorados que distingan al programa de sus competidores, centrados en la innovación y la pertinencia cultural.</p>
+             <div class="text-left space-y-4">
+                <div class="glass-card p-4 rounded-lg"><i data-lucide="sparkles" class="inline w-6 h-6 mr-2 text-emerald-300"></i><strong>Atributo:</strong> Formación multidisciplinaria real que integra cuatro campos del saber humanista.</div>
+                <div class="glass-card p-4 rounded-lg"><i data-lucide="globe-2" class="inline w-6 h-6 mr-2 text-emerald-300"></i><strong>Atributo:</strong> Fuerte identidad regional e interculturalidad, preparando docentes para la diversidad del altiplano.</div>
+                <div class="glass-card p-4 rounded-lg"><i data-lucide="zap" class="inline w-6 h-6 mr-2 text-emerald-300"></i><strong>Acción:</strong> Certificaciones complementarias en competencias digitales, didácticas activas y gestión emocional.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 62: 11.3 Enfoque -->
+    <section id="estrategia-enfoque" class="section bg-pattern">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">11.3 ESTRATEGIA DE ENFOQUE (NICHO)</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Especialización en la Realidad Altoandina</h2>
+            <p class="text-lg text-gray-600 mb-8">Concentrar los esfuerzos en un segmento específico y desatendido: las necesidades educativas de las poblaciones altoandinas y rurales.</p>
+            <div class="text-left space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md"><i data-lucide="target" class="inline w-6 h-6 mr-2 text-emerald-600"></i><strong>Segmento Objetivo:</strong> Estudiantes del sur andino y establecimientos educativos de zonas rurales y de frontera.</div>
+                <div class="bg-white p-4 rounded-lg shadow-md"><i data-lucide="mountain" class="inline w-6 h-6 mr-2 text-emerald-600"></i><strong>Ventaja Competitiva:</strong> Conocimiento profundo del entorno sociocultural andino y currículo pertinente.</div>
+                <div class="bg-white p-4 rounded-lg shadow-md"><i data-lucide="book-open" class="inline w-6 h-6 mr-2 text-emerald-600"></i><strong>Acción:</strong> Currículo adaptado para contextos bilingües, multigrado y con recursos limitados.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 63: 11.4 Elección de Estrategia -->
+    <section id="estrategia-eleccion" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-base font-bold text-emerald-400 tracking-widest">11.4 ELECCIÓN DE LA ESTRATEGIA GENÉRICA</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4">Una Decisión Basada en Evidencia</h2>
+            <p class="text-lg text-gray-300 leading-relaxed text-left space-y-4">
+                Tras analizar los resultados, se concluye que la estrategia más adecuada es una <strong>combinación de diferenciación por innovación con un fuerte enfoque territorial</strong>. Esta decisión se justifica por la alta valoración de la innovación, la accesibilidad de una universidad pública, la identidad regional y la coherencia con el modelo educativo de la UNA Puno.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Diapositiva 64: 11.5 Estrategias Genéricas Propuestas -->
+    <section id="estrategia-genericas" class="section bg-pattern">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">11.5 ESTRATEGIAS GENÉRICAS PROPUESTAS</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Nuestros Tres Pilares Competitivos</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <i data-lucide="lightbulb" class="w-12 h-12 text-emerald-600 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-xl mb-2">Diferenciación por Innovación</h4>
+                    <p class="text-gray-600">Formación tecno-pedagógica de vanguardia y enfoque interdisciplinario.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <i data-lucide="dollar-sign" class="w-12 h-12 text-emerald-600 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-xl mb-2">Diferenciación por Precio</h4>
+                    <p class="text-gray-600">Alta calidad con accesibilidad económica, atrayendo al mejor talento.</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <i data-lucide="anchor" class="w-12 h-12 text-emerald-600 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-xl mb-2">Diferenciación por Estilo de Vida</h4>
+                    <p class="text-gray-600">Formación con identidad regional, que valora la diversidad y la interculturalidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 65: 11.6 Estrategias Específicas Propuestas -->
+    <section id="estrategia-especificas" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-5xl">
+            <h3 class="text-base font-bold text-emerald-400 text-center tracking-widest">11.6 ESTRATEGIAS ESPECÍFICAS PROPUESTAS</h3>
+            <h2 class="text-4xl md:text-5xl font-black my-4 text-center">De la Visión a la Acción Concreta</h2>
+            <div class="grid md:grid-cols-2 gap-6 mt-12 text-left">
+                <div class="glass-card p-4 rounded-lg"><p>1. Revalorizar el conocimiento del entorno cultural y lingüístico andino.</p></div>
+                <div class="glass-card p-4 rounded-lg"><p>2. Formación en presentación personal y habilidades sociales básicas.</p></div>
+                <div class="glass-card p-4 rounded-lg"><p>3. Desarrollo de habilidades comunicativas y socioemocionales.</p></div>
+                <div class="glass-card p-4 rounded-lg"><p>4. Vinculación estratégica con sectores productivos, públicos y privados.</p></div>
+                <div class="glass-card p-4 rounded-lg md:col-span-2"><p>5. Seguimiento y acompañamiento a egresados para asegurar su inserción y permanencia laboral.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 66: Conclusiones (Portada) -->
+    <section id="conclusiones-portada" class="section bg-pattern">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">XII. CONCLUSIONES ESTRATÉGICAS</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Un Diagnóstico Claro para la Acción</h2>
+        </div>
+    </section>
+
+    <!-- Diapositiva 67: Conclusiones Detalladas (Mejorada) -->
+    <section id="conclusiones-detalle" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-black my-4 text-center">Conclusiones en Respuesta a los Objetivos</h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto text-center mb-12">Cada hallazgo del estudio responde directamente a los objetivos planteados, validando la pertinencia del programa y señalando el camino a seguir.</p>
+            <div class="space-y-8">
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2 text-emerald-300 flex items-center"><i data-lucide="check-circle" class="w-6 h-6 mr-3"></i>Objetivo 1: Diagnosticar Demanda Social</h4>
+                    <p class="text-gray-200 text-lg"><strong>Conclusión:</strong> La demanda social por el programa LLPF es <strong>alta, validada y vocacional</strong>. Es la especialidad educativa #1 preferida por los escolares, lo que garantiza una base de postulantes genuinamente interesados.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2 text-emerald-300 flex items-center"><i data-lucide="check-circle" class="w-6 h-6 mr-3"></i>Objetivo 2: Evaluar Mercado Ocupacional</h4>
+                    <p class="text-gray-200 text-lg"><strong>Conclusión:</strong> El mercado exige un <strong>perfil docente integral</strong> que trascienda lo disciplinar, demandando fuertemente competencias socioemocionales, interculturales y digitales. Aunque la empleabilidad es alta (85%), el empleo es precario.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-2 text-emerald-300 flex items-center"><i data-lucide="check-circle" class="w-6 h-6 mr-3"></i>Objetivo 3: Analizar Oferta y Competencia</h4>
+                    <p class="text-gray-200 text-lg"><strong>Conclusión:</strong> El programa posee una <strong>ventaja competitiva única</strong> en la región. Su enfoque multidisciplinario (4 campos) le otorga una profundidad y un perfil humanista que la competencia (IESP enfocados en "Comunicación") no puede igualar.</p>
+                </div>
+                 <div class="glass-card p-6 rounded-lg bg-emerald-900/50 border-emerald-400">
+                    <h4 class="font-bold text-xl mb-2 text-white flex items-center"><i data-lucide="alert-triangle" class="w-6 h-6 mr-3 text-yellow-300"></i>Brecha Estratégica Identificada</h4>
+                    <p class="text-gray-200 text-lg">La principal conclusión transversal es la <strong>brecha entre la formación teórica y la preparación práctica</strong>. Estudiantes, egresados y empleadores coinciden en la necesidad de un currículo más aplicado, actualizado y enfocado en las habilidades blandas que exige el aula moderna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diapositiva 68: Recomendaciones (Portada) -->
+    <section id="recomendaciones-portada" class="section bg-pattern">
+        <div class="container mx-auto text-center">
+            <h3 class="text-base font-bold text-emerald-600 tracking-widest">XIII. RECOMENDACIONES ACCIONABLES</h3>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 my-4">Hoja de Ruta para la Excelencia</h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">Un plan de acción concreto y fundamentado para guiar la implementación y el fortalecimiento del programa de estudios de LLPF.</p>
+        </div>
+    </section>
+
+    <!-- Diapositiva 69: Recomendaciones Detalladas (Mejorada) -->
+    <section id="recomendaciones-detalle" class="section bg-pattern-dark text-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-black my-4 text-center">Hoja de Ruta Estratégica: 5 Pilares de Transformación</h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto text-center mb-12">Estas acciones responden directamente a las conclusiones del estudio y están diseñadas para cerrar las brechas identificadas y potenciar nuestras fortalezas.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <i data-lucide="refresh-cw" class="w-12 h-12 text-emerald-300 mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">1. Actualizar el Currículo</h4>
+                    <p class="text-gray-300">Modernizar los contenidos de Psicología y Filosofía. Integrar transversalmente TICs y habilidades socioemocionales.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <i data-lucide="book-open-check" class="w-12 h-12 text-emerald-300 mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">2. Fortalecer la Práctica</h4>
+                    <p class="text-gray-300">Aumentar la vinculación con II.EE. desde los primeros ciclos y usar metodologías activas y de simulación.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <i data-lucide="user-check" class="w-12 h-12 text-emerald-300 mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">3. Acompañar al Egresado</h4>
+                    <p class="text-gray-300">Implementar un sistema de seguimiento para facilitar la titulación oportuna y la inserción laboral.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <i data-lucide="handshake" class="w-12 h-12 text-emerald-300 mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">4. Crear Alianzas Estratégicas</h4>
+                    <p class="text-gray-300">Establecer convenios con UGELs y la DREP para alinear la formación con las políticas y necesidades regionales.</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg">
+                    <i data-lucide="flask-conical" class="w-12 h-12 text-emerald-300 mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">5. Promover la Investigación</h4>
+                    <p class="text-gray-300">Fomentar la investigación aplicada y la innovación pedagógica como sellos distintivos del programa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p class="font-bold">Universidad Nacional del Altiplano - Puno</p>
+            <p class="text-sm text-gray-400 mt-1">Formando a los profesionales que impulsarán la educación y el desarrollo de nuestra región.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
